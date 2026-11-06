@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OFFSET · Tune every game, keep every play</title>
+<meta name="description" content="OFFSET is a free Windows app that replaces the NVIDIA Control Panel: profiles that switch with your games, real FPS, an in-game overlay, instant replay and recording.">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="img/offset-mark.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/PlusJakartaSans-ExtraBold.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+
+<header class="bar">
+  <a class="logo" href="#top" aria-label="OFFSET, back to the top"><img src="img/offset-mark.svg" alt="" width="40" height="28"><span>OFFSET</span></a>
+  <nav class="bar__nav" aria-label="Sections">
+    <a href="#games">Games</a>
+    <a href="#inside">Inside</a>
+    <a href="#hotkeys">Hotkeys</a>
+    <a href="#questions">Questions</a>
+  </nav>
+  <a class="pill pill--small" data-download href="https://github.com/abdelkaderbouka23-max/offset-releases/releases/latest/download/OffsetApp-win-Setup.exe">Download</a>
+</header>
+
+<main id="main">
+
+<!-- Hero: a game on screen, OFFSET working on top of it. -->
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <div class="hero__media">
+    <video class="hero__video" data-clip muted loop playsinline preload="none" poster="img/kabukicho.jpg" aria-hidden="true"></video>
+    <img class="hero__poster" src="img/kabukicho.jpg" alt="" width="1920" height="1280">
+  </div>
+
+  <div class="hud" data-ui aria-hidden="true">
+    <div class="ov ov--hero">
+      <div class="ov__row ov__row--rec"><i>REC</i><b data-rec>00:41</b></div>
+      <div class="ov__row"><i>FPS</i><b data-fps>212</b></div>
+      <div class="ov__row"><i>Frame</i><b data-ft>4.7 ms</b></div>
+      <div class="ov__row"><i>GPU</i><b data-gpu>71%</b></div>
+      <div class="ov__row"><i>Temp</i><b data-temp>63 °C</b></div>
+      <svg class="ov__graph" viewBox="0 0 120 30" preserveAspectRatio="none"><polyline data-line points=""/><g data-spikes></g></svg>
+    </div>
+    <img class="hud__notice" data-cycle src="img/notice-detected.png" alt="" width="764" height="186">
+    <span class="tag hud__tag" data-game>Fortnite</span>
+  </div>
+
+  <div class="hero__copy">
+    <h1 id="hero-title" class="slant">Tune every game.<br>Keep every play.</h1>
+    <p class="hero__lede">OFFSET is a free Windows app that replaces the NVIDIA Control Panel: profiles that switch with your games, real FPS, an overlay and instant replay.</p>
+    <div class="hero__act">
+      <a class="pill" data-download href="https://github.com/abdelkaderbouka23-max/offset-releases/releases/latest/download/OffsetApp-win-Setup.exe">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span>Download<span class="wide"> for Windows</span></span></a>
+      <a class="pill pill--dark" href="https://github.com/abdelkaderbouka23-max/offset-releases">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg><span>Go to GitHub</span></a>
+    </div>
+    <p class="hero__meta">Version 0.9.8 · 14.6 MB · Windows 10 and 11 · Free</p>
+  </div>
+</section>
+
+<!-- The numbers that make the case. -->
+<section class="stats" aria-labelledby="stats-title">
+  <h2 id="stats-title" class="sr">OFFSET in numbers</h2>
+  <dl>
+    <div><dt>to save the last 30 seconds</dt><dd data-roll="2">2<small>s</small></dd></div>
+    <div><dt>games known by name</dt><dd data-roll="70">70<small>+</small></dd></div>
+    <div><dt>launchers it reads your games from</dt><dd data-roll="9">9</dd></div>
+    <div><dt>bytes injected into your game</dt><dd data-roll="0">0</dd></div>
+  </dl>
+</section>
+
+<!-- The games: logos run past, the rest are named. -->
+<section class="games" id="games" aria-labelledby="games-title">
+  <h2 id="games-title" class="slant">It knows your game the second it starts</h2>
+  <div class="marquee" aria-label="Some of the games OFFSET recognises">
+    <ul class="marquee__track">
+      <li><img src="img/games/fortnite.svg" alt="Fortnite" width="1976" height="551"></li>
+      <li><img src="img/games/valorant.svg" alt="Valorant" width="544" height="371"></li>
+      <li><img src="img/games/cs2.svg" alt="Counter-Strike 2" width="556" height="114"></li>
+      <li><img src="img/games/roblox.svg" alt="Roblox" width="512" height="89"></li>
+      <li><img class="own" src="img/games/minecraft.svg" alt="Minecraft" width="512" height="88"></li>
+      <li aria-hidden="true"><img src="img/games/fortnite.svg" alt="" width="1976" height="551"></li>
+      <li aria-hidden="true"><img src="img/games/valorant.svg" alt="" width="544" height="371"></li>
+      <li aria-hidden="true"><img src="img/games/cs2.svg" alt="" width="556" height="114"></li>
+      <li aria-hidden="true"><img src="img/games/roblox.svg" alt="" width="512" height="89"></li>
+      <li aria-hidden="true"><img class="own" src="img/games/minecraft.svg" alt="" width="512" height="88"></li>
+    </ul>
+  </div>
+  <div class="games__more">
+    <p>Its profile goes on, the overlay comes up and instant replay starts. Seventy games are known by name, and every game installed through these launchers is found by itself:</p>
+    <ul class="tags">
+      <li class="tag">Steam</li><li class="tag">Epic Games</li><li class="tag">Riot</li><li class="tag">Battle.net</li><li class="tag">EA</li>
+      <li class="tag">Ubisoft</li><li class="tag">Rockstar</li><li class="tag">GOG</li><li class="tag">Xbox</li>
+    </ul>
+  </div>
+</section>
+
+<!-- In a game: a square plate of a screen, three things OFFSET does there. -->
+<section class="show" aria-labelledby="show-title">
+  <div class="show__plate" data-ui>
+    <img class="show__photo" src="img/kabukicho-square.jpg" alt="A night street lined with neon signs, standing in for a game on screen" width="1200" height="1200" loading="lazy">
+    <div class="ov" aria-hidden="true">
+      <div class="ov__row ov__row--rec"><i>REC</i><b data-rec>02:41</b></div>
+      <div class="ov__row"><i>FPS</i><b data-fps>212</b></div>
+      <div class="ov__row"><i>Frame</i><b data-ft>4.7 ms</b></div>
+      <div class="ov__row"><i>GPU</i><b data-gpu>71%</b></div>
+      <div class="ov__row"><i>Temp</i><b data-temp>63 °C</b></div>
+      <svg class="ov__graph" viewBox="0 0 120 30" preserveAspectRatio="none"><polyline data-line points=""/><g data-spikes></g></svg>
+    </div>
+    <img class="show__notice show__notice--replay" src="img/notice-replay.png" alt="" width="590" height="230" loading="lazy">
+    <img class="show__notice show__notice--session" src="img/notice-session.png" alt="" width="698" height="230" loading="lazy">
+  </div>
+
+  <div class="show__text">
+    <div class="tabs" role="tablist" aria-label="In a game">
+      <button role="tab" id="tab-ov" aria-controls="pane" aria-selected="true" data-tab="overlay">Overlay</button>
+      <button role="tab" id="tab-rp" aria-controls="pane" aria-selected="false" tabindex="-1" data-tab="replay">Instant replay</button>
+      <button role="tab" id="tab-se" aria-controls="pane" aria-selected="false" tabindex="-1" data-tab="sessions">Sessions</button>
+    </div>
+    <div id="pane" role="tabpanel" aria-labelledby="show-title" aria-live="polite">
+      <h2 id="show-title" class="slant">Numbers over any game</h2>
+      <p id="show-desc">A small click-through box above the game in front: FPS, frame time, GPU load, temperature and a live frame-time line where every stutter shows as a red spike. Nothing is injected into the game, so anti-cheats see nothing.</p>
+    </div>
+    <div class="show__act">
+      <a class="pill" data-download href="https://github.com/abdelkaderbouka23-max/offset-releases/releases/latest/download/OffsetApp-win-Setup.exe"><span>Download OFFSET</span></a>
+      <a class="pill pill--dark" href="https://github.com/abdelkaderbouka23-max/offset-releases/releases"><span>All versions</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Inside the app: real screens, at different sizes. -->
+<section class="inside" id="inside" aria-labelledby="inside-title">
+  <h2 id="inside-title" class="slant">Everything the NVIDIA panel should have been</h2>
+  <div class="bento">
+    <figure class="tile tile--tall">
+      <img src="img/panel-rec.png" alt="The tray panel while recording Valorant: 318 FPS, Competitive profile, auto switch and overlay on, Stop at 02:41" width="784" height="932" loading="lazy">
+      <figcaption><b>One click from the clock.</b> The game, its live numbers, the profile and every switch, in the tray panel.</figcaption>
+    </figure>
+    <figure class="tile tile--wide">
+      <img src="img/app-latency.jpg" alt="3D settings: an estimated PC latency of 23.8 ms at 250 FPS, split into game, render queue, GPU and display" width="850" height="318" loading="lazy">
+      <figcaption><b>Every NVIDIA 3D setting, per game.</b> Written into the driver's own profiles, with the latency each choice costs.</figcaption>
+    </figure>
+    <figure class="tile tile--wide">
+      <img src="img/app-sessions.jpg" alt="Sessions: Fortnite's 1% low is 22 FPS higher than the session before" width="1136" height="268" loading="lazy">
+      <figcaption><b>Proof a change helped.</b> Each game you play is kept with its average FPS, lows and stutters.</figcaption>
+    </figure>
+    <figure class="tile tile--notices">
+      <div class="stack" aria-hidden="true">
+        <img src="img/notice-detected.png" alt="" width="764" height="186" loading="lazy">
+        <img src="img/notice-replay.png" alt="" width="590" height="230" loading="lazy">
+        <img src="img/notice-shot.png" alt="" width="684" height="230" loading="lazy">
+      </div>
+      <figcaption><b>It tells you, without stopping you.</b> Notices at the top of the screen that never take focus from the game.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- The live thing: the hotkeys, pressed here. -->
+<section class="keys-sec" id="hotkeys" aria-labelledby="keys-title">
+  <h2 id="keys-title" class="slant">Press it. It's saved.</h2>
+  <p class="keys-sec__lede">These are OFFSET's hotkeys. They work over any game; try them here, on the keys or on your keyboard.</p>
+  <div class="keys" role="group" aria-label="OFFSET hotkeys">
+    <button type="button" class="key" data-key="F9"><span class="key__caps"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>F9</kbd></span><span class="key__name">Record</span><span class="key__say">Start and stop a recording, with game sound and your mic.</span></button>
+    <button type="button" class="key key--main" data-key="F10"><span class="key__caps"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>F10</kbd></span><span class="key__name">Save replay</span><span class="key__say">The last 30 seconds, as an mp4, in about two seconds.</span></button>
+    <button type="button" class="key" data-key="F11"><span class="key__caps"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>F11</kbd></span><span class="key__name">Screenshot</span><span class="key__say">A full-quality PNG of the game's screen.</span></button>
+  </div>
+</section>
+
+<!-- The line-up: every feature, the cards it runs on, where it lives and its hotkey. -->
+<section class="cards" aria-labelledby="cards-title">
+  <h2 id="cards-title" class="slant">What your graphics card gets</h2>
+  <table class="lineup">
+    <caption class="sr">Features, the cards they work on, where they are in OFFSET and their hotkeys</caption>
+    <thead class="sr"><tr><th scope="col">Feature</th><th scope="col">Works on</th><th scope="col">In OFFSET</th><th scope="col">Hotkey</th></tr></thead>
+    <tbody>
+      <tr class="lineup__day"><th colspan="4" scope="rowgroup">Any graphics card</th></tr>
+      <tr><td>Resolution and refresh</td><td>NVIDIA, AMD, Intel</td><td>Displays</td><td>Ctrl Alt R</td></tr>
+      <tr><td>Next refresh rate</td><td>NVIDIA, AMD, Intel</td><td>Displays</td><td>Ctrl Alt H</td></tr>
+      <tr><td>Brightness, contrast, gamma</td><td>NVIDIA, AMD, Intel</td><td>Colour</td><td>—</td></tr>
+      <tr><td>Night shift</td><td>NVIDIA, AMD, Intel</td><td>Colour</td><td>Ctrl Alt N</td></tr>
+      <tr><td>Profiles and game switching</td><td>NVIDIA, AMD, Intel</td><td>Profiles</td><td>—</td></tr>
+      <tr><td>In-game overlay</td><td>NVIDIA, AMD, Intel</td><td>Monitoring</td><td>Alt R</td></tr>
+      <tr><td>Recording</td><td>NVIDIA, AMD, Intel</td><td>Tray panel</td><td>Ctrl Alt F9</td></tr>
+      <tr><td>Instant replay</td><td>NVIDIA, AMD, Intel</td><td>Settings</td><td>Ctrl Alt F10</td></tr>
+      <tr><td>Screenshot</td><td>NVIDIA, AMD, Intel</td><td>Videos\OFFSET</td><td>Ctrl Alt F11</td></tr>
+      <tr><td>Real FPS and sessions</td><td>NVIDIA, AMD, Intel</td><td>Monitoring</td><td>—</td></tr>
+      <tr class="lineup__day"><th colspan="4" scope="rowgroup">NVIDIA cards</th></tr>
+      <tr><td>Digital vibrance</td><td>GeForce, RTX</td><td>Colour</td><td>Ctrl Alt ↑ ↓</td></tr>
+      <tr><td>Custom resolutions</td><td>GeForce, RTX</td><td>Resolutions</td><td>—</td></tr>
+      <tr><td>3D settings per game</td><td>GeForce, RTX</td><td>3D settings</td><td>—</td></tr>
+      <tr><td>Temperature, clocks and fan</td><td>GeForce, RTX</td><td>Monitoring</td><td>—</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Questions -->
+<section class="faq" id="questions" aria-labelledby="faq-title">
+  <h2 id="faq-title" class="faq__title slant">Before you install</h2>
+  <div class="faq__list">
+    <details>
+      <summary>Is OFFSET free?</summary>
+      <p>Yes. There are no ads and nothing to buy. An account is optional and only keeps your profiles in sync between PCs.</p>
+    </details>
+    <details>
+      <summary>Can an anti-cheat flag it?</summary>
+      <p>OFFSET never touches a game. The overlay is its own window above the game, FPS comes from the frame events Windows already keeps, and recording copies the screen. Nothing is injected.</p>
+    </details>
+    <details>
+      <summary>Do I need an NVIDIA card?</summary>
+      <p>No. Displays, colour, profiles, the overlay, FPS, recording and instant replay work on any card. Digital vibrance, custom resolutions and the 3D settings need an NVIDIA card and its driver.</p>
+    </details>
+    <details>
+      <summary>Will it cost me frames?</summary>
+      <p>Recording and replay run on your card's own video encoder (NVENC, AMF or Quick Sync), not the processor. The overlay redraws once a second, and FPS is read from Windows, not from inside the game.</p>
+    </details>
+    <details>
+      <summary>Why does Windows warn me about the installer?</summary>
+      <p>OFFSET is not code-signed yet, so Windows SmartScreen says it protected your PC. Click More info, then Run anyway. The installer comes straight from OFFSET's releases on GitHub.</p>
+    </details>
+    <details>
+      <summary>How does it update?</summary>
+      <p>Once a day, never during a game, OFFSET checks GitHub, downloads the new version in the background and installs it the next time it starts. Settings, profiles and recordings stay.</p>
+    </details>
+  </div>
+</section>
+
+<!-- The action: the whole band is the download; its letters start offset and snap into line. -->
+<a class="go" data-download href="https://github.com/abdelkaderbouka23-max/offset-releases/releases/latest/download/OffsetApp-win-Setup.exe">
+  <span class="go__say">The installer for Windows 10 and 11, 14.6 MB. It installs in seconds and keeps itself up to date.</span>
+  <svg class="go__arrow" viewBox="0 0 48 48" aria-hidden="true"><path d="M12 36 36 12M16 12h20v20"/></svg>
+  <span class="go__word slant" aria-label="Download"><span aria-hidden="true">D</span><span aria-hidden="true">o</span><span aria-hidden="true">w</span><span aria-hidden="true">n</span><span aria-hidden="true">l</span><span aria-hidden="true">o</span><span aria-hidden="true">a</span><span aria-hidden="true">d</span></span>
+</a>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__cols">
+    <div>
+      <h2>Download</h2>
+      <ul>
+        <li><a data-download href="https://github.com/abdelkaderbouka23-max/offset-releases/releases/latest/download/OffsetApp-win-Setup.exe">Installer</a></li>
+        <li><a href="https://github.com/abdelkaderbouka23-max/offset-releases/releases/latest/download/OffsetApp-win-Portable.zip">Portable zip</a></li>
+        <li><a href="https://github.com/abdelkaderbouka23-max/offset-releases/releases">Every version</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>GitHub</h2>
+      <ul>
+        <li><a href="https://github.com/abdelkaderbouka23-max/offset-releases">offset-releases</a></li>
+        <li><a href="https://github.com/abdelkaderbouka23-max/offset-releases/issues">Report a problem</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Needs</h2>
+      <ul>
+        <li>Windows 10 or 11</li>
+        <li>Any graphics card</li>
+        <li>NVIDIA for 3D settings</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Credits</h2>
+      <ul>
+        <li>Street photograph: <a href="https://commons.wikimedia.org/wiki/File:Colorful_neon_street_signs_in_Kabukich%C5%8D,_Shinjuku,_Tokyo.jpg">“Colorful neon street signs in Kabukichō, Shinjuku, Tokyo”</a> by Basile Morin, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, cropped</li>
+        <li>Game logos from Wikimedia Commons; they are trademarks of their owners</li>
+        <li>Type: Plus Jakarta Sans, SIL Open Font License</li>
+      </ul>
+    </div>
+  </div>
+  <p class="foot__word slant" aria-hidden="true"><img src="img/offset-mark.svg" alt="" width="64" height="44">OFFSET</p>
+  <p class="foot__legal">OFFSET is not made by or affiliated with NVIDIA, Epic Games, Riot Games, Valve, Roblox or Mojang. NVIDIA, GeForce, G-SYNC, Fortnite, Valorant, Counter-Strike, Roblox and Minecraft are trademarks of their owners.</p>
+</footer>
+
+<div class="toast" aria-live="polite"><img alt="" width="590" height="230"></div>
+<script src="site.js" defer></script>
+</body>
+</html>

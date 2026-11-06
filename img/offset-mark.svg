@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 44" role="img" aria-label="OFFSET">
+  <!-- A slanted badge holding two bars set off from each other: the offset, literally. -->
+  <g transform="skewX(-14) translate(10 0)">
+    <rect x="2" y="2" width="52" height="40" rx="11" fill="#3d6bff"/>
+    <rect x="10" y="11" width="25" height="8" rx="4" fill="#fff"/>
+    <rect x="21" y="25" width="25" height="8" rx="4" fill="#fff"/>
+  </g>
+</svg>
