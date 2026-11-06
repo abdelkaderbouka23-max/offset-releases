@@ -262,7 +262,7 @@ ul, ol { padding: 0; list-style: none; }
 .foot a:hover { color: var(--press); }
 .foot__word { display: flex; align-items: center; gap: .1em; margin-top: clamp(56px, 8vh, 96px); font-size: 21vw; line-height: .78; white-space: nowrap; }
 .foot__word img { width: .62em; height: auto; flex: none; }
-.foot__legal { margin-top: 24px; font-size: var(--small); color: #4a4f58; }
+.foot__legal { margin-top: 24px; max-width: 90ch; font-size: var(--small); color: #4a4f58; }
 
 /* ---------- the hotkey notice ---------- */
 .toast { position: fixed; z-index: 40; left: 50%; top: 14px; width: min(420px, calc(100vw - 32px)); pointer-events: none; transform: translate(-50%, -160%); transition: transform 520ms var(--ease); }

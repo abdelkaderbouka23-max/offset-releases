@@ -13,22 +13,31 @@
   const video = $('[data-clip]');
   if (video && !still) {
     video.src = 'clips/hero.mp4';
-    video.addEventListener('loadeddata', () => { hero.classList.add('has-clip'); video.play().catch(() => {}); }, { once: true });
+    video.addEventListener('loadeddata', () => { hero.classList.add('has-clip'); seq = SEQ.Clip; n = 0; nextNotice(); video.play().catch(() => {}); }, { once: true });
     video.addEventListener('error', () => video.removeAttribute('src'), { once: true });
     video.load();
   }
 
   /* ---------- OFFSET's notices arrive over the game, one after another ---------- */
   const cycle = $('[data-cycle]'), gameTag = $('[data-game]');
-  const SEQ = [
-    ['img/notice-detected.png', 764, 186, 'Fortnite'],
-    ['img/notice-replay.png', 590, 230, 'Fortnite'],
-    ['img/notice-shot.png', 684, 230, 'Fortnite'],
-    ['img/notice-session.png', 698, 230, 'Fortnite'],
-  ];
-  let n = 0;
+  // the notices name the game on screen: the street photo stands for Fortnite, the clip is Call of Duty
+  const SEQ = {
+    Fortnite: [
+      ['img/notice-detected.png', 764, 186, 'Fortnite'],
+      ['img/notice-replay.png', 590, 230, 'Fortnite'],
+      ['img/notice-shot.png', 684, 230, 'Fortnite'],
+      ['img/notice-session.png', 698, 230, 'Fortnite'],
+    ],
+    Clip: [
+      ['img/notice-detected-cod.png', 764, 186, 'Call of Duty'],
+      ['img/notice-replay.png', 590, 230, 'Call of Duty'],
+      ['img/notice-shot-cod.png', 726, 230, 'Call of Duty'],
+      ['img/notice-session-cod.png', 694, 230, 'Call of Duty'],
+    ],
+  };
+  let seq = SEQ.Fortnite, n = 0;
   function nextNotice() {
-    const [src, w, h, game] = SEQ[n++ % SEQ.length];
+    const [src, w, h, game] = seq[n++ % seq.length];
     cycle.classList.remove('is-on');
     setTimeout(() => {
       cycle.src = src; cycle.width = w; cycle.height = h; gameTag.textContent = game;
