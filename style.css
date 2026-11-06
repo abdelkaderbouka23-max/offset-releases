@@ -343,7 +343,8 @@ ul, ol { padding: 0; list-style: none; }
 
 /* The lead feature */
 .hl { display: grid; grid-template-columns: 4fr 7fr; gap: var(--margin); align-items: center; padding: clamp(64px, 9vw, 128px) var(--margin); }
-.hl h2 { font-size: var(--head); max-width: 12ch; }
+.hl h2 { font-size: var(--head); max-width: 16ch; }
+.hl__list kbd { font: 600 12px/1 inherit; padding: 2px 6px; border-radius: 5px; background: rgba(255,255,255,.12); }
 .hl__lede { font-size: clamp(18px, 1.5vw, 21px); margin: 20px 0 28px; max-width: 34ch; }
 .hl__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
 .hl__list li { padding-left: 18px; border-left: 2px solid var(--accent, #3d6bff); max-width: 46ch; }
